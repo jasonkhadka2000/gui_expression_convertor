@@ -8,7 +8,7 @@ def Evaluate():
     outputtype=choicevar1.get()
     input1=list(input_expression.get())
     if inputtype==outputtype:
-        outputexpression=input1
+        outputexpression="".join(input1)
     else:
         if inputtype=="infix":
             if outputtype=="postfix":

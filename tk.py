@@ -27,10 +27,10 @@ def Evaluate():
                 outputexpression=infixtoprefix(intermediate)
             else:
                 outputexpression=postfixtoinfix(input1)
-    output1 = Label(root, text="The required expression is:", font="timesnewroman 12 bold", pady=5).grid(row=6, column=0)
-    output = Label(root, text=outputexpression, font="timesnewroman 12", pady=5,relief="sunken").grid(row=6,column=1)
+    output1 = Label(root, text="The required expression is:", font="timesnewroman 12", pady=5).grid(row=6, column=0)
+    output = Label(root, text=outputexpression.center(75,' '),bg="white", font="timesnewroman", pady=5).grid(row=6,column=1)
 
-    print(outputexpression)
+
 
 root=Tk()
 root.geometry("700x300")
@@ -74,7 +74,5 @@ radio=Radiobutton(root,text="Infix",variable=choicevar1,value="infix").grid(row=
 radio=Radiobutton(root,text="Prefix",variable=choicevar1,value="prefix").grid(row=5,column=1)
 radio=Radiobutton(root,text="Postfix",variable=choicevar1,padx=25,value="postfix").grid(row=5,column=2)
 convert_button=Button(root,text="convert",command=Evaluate).grid(row=5,column=4)
-
-
 
 root.mainloop()
